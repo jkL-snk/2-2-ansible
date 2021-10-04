@@ -9,6 +9,7 @@
   tasks:
   
   - name: create user
+    no_log: yes 
     with_items: "{{ lookup('dict', users) }}"
     user:
       name: "{{ item.value.name }}"
